@@ -1,0 +1,15 @@
+<h1>Sign Up</h1>
+
+<%= form_with model: @user do |f| %>
+	<%= f.label :email%>
+	<%= f.text_field :email%>
+	<%= f.label :usename%>
+	<%= f.text_field :usename%>
+	<%= f.label :password%>
+	<%= f.password_field :password%>
+	<%= f.submit 'Sign Up' %>
+<%end%>
+
+
+<h3>or Login with google</h3>
+<%= link_to "Log In with Google", "/auth/google_oauth2", method: :post%>
